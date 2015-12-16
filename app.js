@@ -29,29 +29,6 @@ var connection = mysql.createConnection({
     password : database.pass,
     database : database.db
 });
-// load model files
-var modelFiles = fs.readdirSync('./models/');
-if(Array.isArray(modelFiles)){
-    if(modelFiles.length > 0){
-        for(var i in modelFiles){
-            require('./models/'+modelFiles[i])(connection);
-        }
-
-    }
-}
-// Controllers : load controller file(s) ======================================
-/*
-var files = fs.readdirSync('./controllers/');
-if(Array.isArray(files)){
-    if(files.length > 0){
-        for(var i in files){
-            require('./controllers/'+files[i])(app);
-        }
-
-    }
-}
-*/
-
 
 // routes : load route file(s) ================================================
 var files = fs.readdirSync('./routes/');
