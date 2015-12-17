@@ -1,9 +1,10 @@
 // contollers/userController.js
-var postModel = require('../models/user_model.js');
+var userModel = require('../models/user_model.js');
 var user = function () {};
 user.prototype.login = function(req, res){
-    postModel.getUser();
-    res.render('index.html'); // load the index.ejs file
+    var user =  userModel.getUser();
+    console.log(user);
+    res.render('index.html');
 };
 user.prototype.logout = function (req,res) {
 

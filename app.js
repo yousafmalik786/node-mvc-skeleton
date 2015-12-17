@@ -29,7 +29,8 @@ var connection = mysql.createConnection({
     password : database.pass,
     database : database.db
 });
-
+connection.connect();
+global.connection = connection;
 // routes : load route file(s) ================================================
 var files = fs.readdirSync('./routes/');
 if(Array.isArray(files)){

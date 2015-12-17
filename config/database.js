@@ -3,7 +3,7 @@ module.exports = {
     'host' : 'localhost',
     'user' : 'root',
     'pass'     : 'root',
-    'db' :'',
+    'db' :'dealer_intellect',
     'port'     :  3306 
 
 };
